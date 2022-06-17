@@ -58,9 +58,9 @@ void sendMail(String text) {
 
   /* Set the message headers */
   message.sender.name = "ESP";
-  message.sender.email = AUTHOR_EMAIL;
+  message.sender.email = GetSmtpUser();
   message.subject = "ESP Test Email";
-  message.addRecipient("Janno", RECIPIENT_EMAIL);
+  message.addRecipient("Janno", GetSmtpRecipient());
 
   //Send raw text message
   String textMsg = text;
